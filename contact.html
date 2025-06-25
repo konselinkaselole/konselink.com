@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konselink.com | Pusat Layanan Psikologi & Konseling</title>
+  <meta name="description" content="Dapatkan bantuan psikolog terpercaya kapan saja. Konselink.com hadir untuk mendampingi kamu melalui sesi konseling yang fleksibel dan aman.">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+    <nav id="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1>
+            <i class="fas fa-brain icon-highlight" aria-hidden="true"></i>
+            <span class="text-primary">Konselink</span>
+            <span class="text-highlight">.com</span>
+          </h1>
+        </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>     
+      </div>   
+    </nav>
+
+ <main>
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Kiri: Info Kontak -->
+      <div class="contact-info">
+        <h2>Hubungi Kami</h2>
+        <p>Kamu dapat menghubungi kami melalui informasi di bawah ini.</p>
+        <p><i class="fas fa-envelope"></i> konseling@gmail.com</p>
+        <hr>
+        <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+        <hr>
+        <p><i class="fas fa-map-marker-alt"></i> 
+          UNAMA Bimbingan Dan Konseling, Jl. Teknik Informatika, Kota Jambi, Jambi, Indonesia
+        </p>
+      </div>
+
+      <!-- Kanan: Form Kontak -->
+      <div class="contact-form">
+
+        <div id="pesanSukses" class="message-box">
+    Terima kasih! Pesan kamu sudah dikirim.
+  </div>
+
+        <form id="kontakForm" action="#" method="post">
+          <label for="nama">Nama Lengkap <span class="required">*</span></label>
+          <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required />
+
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+
+          <label for="pesan">Pesan <span class="required">*</span></label>
+          <textarea id="pesan" name="pesan" placeholder="Pesan" rows="6" required></textarea>
+
+          <button type="submit">Kirim Pesan</button>
+
+    
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+     <footer id="main-footer" class="bg-dark text-center py-1">
+          <div class="container">
+            Copyright &copy; 2025, Konselink.com
+          </div>
+          <div class="social-links text-center">
+            <p>Ikuti kami di:</p>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
+            </a> |
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook
+            </a> |
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+            </a>
+          </div>
+        </footer>
+
+        <script>
+  document.getElementById("kontakForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Hindari reload halaman
+
+    // Tampilkan box pesan
+    const pesanSukses = document.getElementById("pesanSukses");
+    pesanSukses.style.display = "block";
+
+    // Reset form
+    this.reset();
+
+    // Sembunyikan pesan setelah 5 detik
+    setTimeout(() => {
+      pesanSukses.style.display = "none";
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>

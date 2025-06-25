@@ -1,0 +1,1059 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* font utama seluruh halaman */
+  line-height: 1.4; /* spasi antarbaris teks */
+  background-color: #FFF5EC; /*warna tema Konselink */
+  color: #5E5E5E;  /*warna teks utama */
+}
+
+/* Digunakan sebagai pembungkus utama konten agar tidak terlalu lebar. */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #3A506B; /* warna tema utama Konselink.com. */
+  
+}
+
+/* Logo (ikon + teks) */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* warna icon otak */
+.icon-highlight {
+  font-size: 1.5rem; 
+  color: #A8D5BA; 
+}
+
+.text-primary {
+  font-size: 1.5rem;  /* Ukuran teks Konselink */
+  font-weight: bold;
+  color: #89CFF0;
+}
+
+/* warna teks .com */
+.text-highlight {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f78da7; 
+  animation: blink 1.5s infinite;
+}
+
+.marquee {
+  display: inline-block;
+  animation: scrollLeft 15s linear infinite;
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #3A506B;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+.marquee h1 {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  padding-left: 100%;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: transparent; /* opsional */
+  white-space: nowrap;
+}
+
+/* Animasi dari kanan ke kiri */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Animasi blink-blink */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Navbar wrapper */
+#navbar {
+  position: sticky;
+  top: 0;
+  background: #3A506B;
+  color: #FFF5EC;
+  padding: 0.5rem 0 1rem;
+  z-index: 10; /* urutan lapisan elemen secara vertikal (depan-belakang) */
+}
+
+/* Container navbar: logo dan menu ditumpuk vertikal, diratakan tengah */
+#navbar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Logo (icon otak + teks) */
+.logo h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.8rem;
+  font-family: "Cinzel", serif;
+  margin: 0;
+}
+
+.icon-highlight {
+  font-size: 1.8rem;
+  color: #A8D5BA;
+}
+
+.text-primary {
+  color: #89CFF0;
+}
+
+.text-highlight {
+  color: #f78da7;
+}
+
+/* Menu navigasi horizontal */
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #FFF5EC;
+  text-decoration: none;
+  font-family: "Saira", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #A8D5BA;
+  color: #3A506B;
+  border-radius: 5px;
+}
+
+
+#showcase {
+  position: sticky;
+  background: #3A506B url('../images/latar.jpg') no-repeat center center/cover;
+  height: 83vh;
+  overflow: hidden;
+  color: #FFF5EC;
+}
+
+#showcase .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none; /* agar tidak ganggu klik/tombol */
+}
+
+#showcase .showcase-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 100%;
+  padding: 0 2rem;
+}
+
+p, ol, li, b {
+  margin: 0.5rem 0;
+  font-family: "Karla", sans-serif;
+}
+
+.section-description {
+  margin-bottom: 2rem;
+  color: #5E5E5E;
+  font-size: 1.1rem;
+}
+
+.bg-light {
+  background: #FFF5EC;
+  color: #5E5E5E;
+}
+.bg-dark {
+  background: #3A506B;
+  color: #FFF5EC;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  color: #c8e0c8;
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* tampilan standar tombol/link */
+.btn {
+  display: inline-block;
+  color: #3A506B;
+  background: #A8D5BA;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px; /* Membuat sudut tombol jadi sedikit membulat */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Mengubah background tombol menjadi biru muda saat disentuh. */
+.btn:hover {
+  background: #89CFF0;
+}
+
+/* Variasi tombol dengan warna biru muda langsung */
+.btn-dark {
+  background-color: #89CFF0;
+  color: #3A506B;
+}
+
+/* mengatur garis dihalaman home */
+.section-divider {
+    border-top: 2px solid #ccc;
+    margin: 2rem 0;
+}
+
+/* card "layanan kami" di home */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card.text-center h3,
+.card.text-center p {
+  text-align: center;
+}
+
+
+/* halaman ke2 (tentang) */
+
+.visimisi-flex {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.visimisi-box {
+  flex: 1 1 45%;
+  
+}
+
+.visimisi-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.visimisi-header h3 {
+  margin: 0;
+}
+
+.list {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+#tentang-keunggulan .items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 3rem;
+  margin-top: 10px;
+}
+
+#tentang-keunggulan .items .item {
+  flex: 1;
+  text-align: justify;
+  padding: 1rem;
+}
+
+.item h3 {
+  font-family: 'Cinzel', serif; /* atau font lain sesuai tema */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* memberi jarak antar gambar dan teks */
+#tentang-keunggulan .item img {
+  max-width: 180px; /* atau ukuran sesuai kebutuhan */
+  height: auto;
+  margin-bottom: 1rem; /* atau 20px */
+  display: block; /* opsional, untuk hilangkan white-space inline */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+#tentang-keunggulan .items .item i {
+  background: #d5aba8;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+
+
+/* halaman 3(layanan) */
+
+#layanan {
+  display: flex;
+}
+
+#layanan div {
+  flex: 1;
+}
+
+.plans-container {
+  display: flex;
+  gap: 30px; /* jarak antar kartu */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+
+/* kartu layanan */
+.plan-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  color: #5E5E5E;
+}
+
+/* kartu naik sedikit ke atas saat di hover */
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* judul paket */
+.plan-card h3 {
+  font-size: 1.8em;
+  color: #3A506B;
+  margin-bottom: 10px;
+}
+
+/* harga layanan */
+.plan-card .price {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #3A506B;
+  margin-bottom: 20px;
+}
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+.plan-card ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  color: #5E5E5E;
+  line-height: 1.4;
+}
+.plan-card ul li::before {
+  content: '✔';
+  color: #f78da7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* mengatur jarak antara rek. dokter dan footer */
+.layanan-section {
+  padding-bottom: 4rem; 
+}
+
+.layanan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 2rem; /*mengatur jarak kanan kiri rek. dokter */
+}
+
+.layanan-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.layanan-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.layanan-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid #3A506B;
+}
+.layanan-item h3 {
+  padding: 15px;
+  margin: 0;
+  color: #3A506B;
+}
+.layanan-item p {
+  padding: 0 15px 15px;
+  color: #5E5E5E;
+  font-size: 0.9em;
+}
+
+html {
+  scroll-padding-top: 65px; /* Atur supaya header tidak potong isi saat scroll */
+  scroll-behavior: smooth;
+}
+
+.form-section {
+  background-color: #FFF5EC; /* latar form agar cocok */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-family: 'Cinzel', serif;
+  color: #5E5E5E;
+  margin-bottom: 1.2rem;
+}
+
+.form-section .container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-section label {
+  text-align: left;
+  font-weight: bold;
+  color: #5E5E5E;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: #edf5fd;
+  line-height: 1.2;
+}
+
+.form-section textarea {
+  resize: vertical;
+  min-height: 80px; /* batasi tinggi textarea */
+  max-height: 150px;
+  line-height: 1.3;
+}
+
+.form-section button {
+  background-color: #a3cefd;
+  color: #5E5E5E;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form-section button:hover {
+  background-color: #edf5fd;
+}
+
+.form-card {
+  background-color: #A8D5BA; 
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  margin: 20px auto;
+  border: 1px solid #A8D5BA;
+}
+
+#payment-section {
+  background-color: #edf5fd;
+  padding: 1.5rem 1rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Karla', sans-serif;
+}
+
+#payment-section h2 {
+  font-size: 1.8rem;
+  color: #3A506B;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#payment-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+#payment-section ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+#payment-section p {
+  color: #5E5E5E;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+#payment-section button {
+  background-color: #89CFF0;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+#payment-section button:hover {
+  background-color: #3A506B;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.payment-option {
+  text-align: center;
+  max-width: 260px;
+}
+
+.payment-option img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 0rem;
+}
+
+.dana-img {
+  width: 200px !important; /* Atur sesuai keinginan */
+  height: auto !important;
+  margin-bottom: 0rem;
+}
+
+/* halaman ke4(contact) */
+
+.required {
+  color: rgb(255, 121, 121);
+}
+
+.contact-section {
+  padding: 60px 20px;
+}
+
+/* Membuat layout 2 kolom menggunakan flex */
+.contact-container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  background: #A8D5BA;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contact-info, .contact-form {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Menata judul “Hubungi Kami” */
+.contact-info h2 {
+  color: #3A506B;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Menata semua paragraf di area kontak agar nyaman dibaca dan berwarna senada. */
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3A506B;
+}
+
+/* Menambahkan spasi di kanan ikon */
+.contact-info i {
+  margin-right: 10px;
+  color: #5E5E5E;
+}
+
+/* Membuat elemen dalam form (input, label, button) tersusun vertikal. */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menata teks label form agar lebih menonjol dan rapi. */
+.contact-form label {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #3A506B;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 12px;
+  border: none;
+  background: #f4f4f4;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* mengubah tinggi textarea */
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Menata tombol submit */
+.contact-form button {
+  margin-top: 30px;
+  padding: 14px;
+  background-color: #89CFF0;
+  color: #3A506B;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #A8D5BA;
+}
+
+/* pesan box */
+.message-box {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-left: 5px solid #28a745;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+
+
+.social-links {
+  margin-top: 10px; /* Jarak atas antara teks "Ikuti kami di:" dan linknya */
+  margin-right: 5px;
+  font-size: 1.1rem;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none; /* Hilangkan garis bawah */
+  margin: 0 8px; /* Spasi horizontal antar link */
+  transition: color 0.3s ease; /* Efek transisi halus saat hover */
+  font-weight: bold;
+}
+
+.social-link:hover {
+  color: #ccc;
+}
+
+/* ============================= */
+/*        MEDIA QUERIES         */
+/* ============================= */
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  #showcase {
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-position: center top;
+  }
+
+  #showcase .showcase-content {
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #navbar .container {
+    
+    gap: 0.3rem;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .l-heading {
+    font-size: 2.5rem;
+  }
+
+  .m-heading {
+    font-size: 1.5rem;
+  }
+
+  .visimisi-flex {
+    flex-direction: column;
+  }
+
+  #tentang-keunggulan .items .item {
+    padding: 0;
+  }
+
+  .layanan-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .layanan-item img {
+    height: 250px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info, .contact-form {
+    padding: 20px;
+  }
+
+  .marquee h1 {
+    font-size: 1.5rem;
+  }
+
+  #navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    margin-top: 120px; /* dorong teks hero agar tidak tertutup navbar */
+    text-align: center;
+  }
+
+  .payment-methods {
+    gap: 0rem;
+  }
+
+   .payment-option {
+    margin: 0rem;
+  }
+
+  #payment-section {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #payment-section h2 {
+    font-size: 1.5rem;
+  }
+
+  #payment-section button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #payment-section ul li {
+    font-size: 0.95rem;
+  }
+
+  .payment-img {
+    width: 120px;
+  }
+}
+
+/* Tablet (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #showcase {
+    height: 60vh;
+  }
+
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card {
+    width: 45%;
+  }
+
+  .layanan-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .logo {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  #navbar .container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .marquee h1 {
+    font-size: 2rem;
+  }
+
+  .layanan-item img {
+    height: 250px;
+  }
+
+   #payment-section {
+    padding: 2rem;
+    max-width: 80%;
+  }
+
+  #payment-section h2 {
+    font-size: 1.7rem;
+  }
+
+  #payment-section button {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #payment-section ul li {
+    font-size: 1rem;
+  }
+
+  .payment-img {
+    width: 150px;
+}
+
+/* Laptop & Desktop Besar (≥ 1025px) */
+@media (min-width: 1025px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .plan-card {
+    width: 300px;
+  }
+
+  .layanan-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  #navbar .container {
+    
+    justify-content: space-between;
+  }
+
+  .marquee h1 {
+    font-size: 2.5rem;
+  }
+
+  #payment-section {
+    padding: 2.5rem;
+    max-width: 600px;
+  }
+
+  #payment-section h2 {
+    font-size: 1.8rem;
+  }
+
+  #payment-section button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  #payment-section ul li {
+    font-size: 1.05rem;
+  }
+  /* Payment Section */
+  #payment-section {
+    padding: 3rem;
+  }
+
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .payment-option {
+    width: 200px;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .payment-option img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+  }
+}}

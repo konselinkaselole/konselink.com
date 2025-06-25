@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konselink.com | Pusat Layanan Psikologi & Konseling</title>
+  <meta name="description" content="Dapatkan bantuan psikolog terpercaya kapan saja. Konselink.com hadir untuk mendampingi kamu melalui sesi konseling yang fleksibel dan aman.">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+    <nav id="navbar">
+       <div class="container">
+        <div class="logo">
+            <h1>
+              <i class="fas fa-brain icon-highlight" aria-hidden="true"></i>
+              <span class="text-primary">Konselink</span>
+              <span class="text-highlight">.com</span>
+            </h1>
+         </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>       
+       </div>
+    </nav>
+
+    <main>
+    <div class="plans-container">
+        <div class="plan-card essential">
+            <h3>Paket Harmoni</h3>
+            <p class="price">Rp. 399.000 / sesi</p>
+            <ul>
+                <li>Psikolog berusia sekitar 26 - 30 tahun</li>
+                <li>Pengalaman kerja antara 2 - 4 tahun</li>
+                <li>Menangani sekitar 300 – 500 klien</li>
+                <li>Fokus pada masalah umum seperti: Kecemasan & stres, Regulasi emosi, Depresi ringan, Psikosomatik, Self-harm, Relasi sosial</li>
+            </ul>
+        </div>
+
+        <div class="plan-card profesional">
+            <h3>Paket Proaktif</h3>
+            <p class="price">Rp 599.000 / sesi</p>
+            <ul>
+                <li>Psikolog berusia 30 - 40 tahun</li>
+                <li>Pengalaman praktik 4 - 10 tahun</li>
+                <li>Berpengalaman menangani 501 - 900 orang</li>
+                <li>Spesialis dalam: Trauma emosional, pengembangan karier, kecanduan, kekerasan rumah tangga, konseling pernikahan</li>
+            </ul>
+        </div>
+
+        <div class="plan-card premium">
+            <h3>Paket Utama</h3>
+            <p class="price">Rp 899.000 / sesi</p>
+            <ul>
+                <li>Psikolog senior berusia di atas 40 tahun</li>
+                <li>Lebih dari 10 tahun berkarya di bidang psikologi</li>
+                <li>Pernah menangani lebih dari 900 klien</li>
+                <li>Ahli dalam kasus berat seperti: Gangguan kepribadian, krisis pernikahan, gangguan mental kompleks</li>
+            </ul>
+        </div>
+    </div>    
+
+        <div class="text-center py-1">
+        <a href="#form-pendaftaran" class="btn">Daftar Sekarang</a>
+        </div>
+
+
+      <section class="layanan-section">
+
+            <h2 class="m-heading p-2 text-center">Rekomendasi Dokter</h2>
+        
+        <div class="layanan-grid">
+          <div class="layanan-item">
+            <img src="images/febri.png" alt="Dr. Febri - Psikolog Spesialis Kecemasan dan Regulasi Emosi"/>
+            <h3>Dr. Febri</h3>
+            <p>
+              Sesi privat untuk membahas masalah pribadi, emosional, dan mental
+              dengan konselor profesional.
+            </p>
+          </div>
+          <div class="layanan-item">
+            <img src="images/fadil.png" alt="Dr. Fadil - Psikolog Ahli Konseling Pernikahan dan Karier"/>
+            <h3>Dr. Fadil</h3>
+            <p>
+              Membantu anggota keluarga berkomunikasi dan menyelesaikan konflik
+              untuk hubungan yang lebih harmonis.
+            </p>
+          </div>
+          <div class="layanan-item">
+            <img src="images/ana.png" alt="Dr. Ana - Psikolog Bimbingan Akademik dan Prestasi"/>
+            <h3>Dr. Ana</h3>
+            <p>
+              Bimbingan untuk meningkatkan prestasi belajar, memilih jurusan,
+              dan merencanakan pendidikan.
+            </p>
+          </div>
+          <div class="layanan-item">
+            <img src="images/rian.png" alt="Dr. Rian - Psikolog Peningkatan Kesejahteraan dan Keterampilan Hidup"/>
+            <h3>Dr. Rian</h3>
+            <p>
+              Program interaktif untuk meningkatkan keterampilan hidup,
+              kepercayaan diri, dan kesejahteraan.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+<section id="form-pendaftaran" class="form-section">
+  <div class="form-card">
+    <h2>Formulir Pendaftaran</h2>
+    <form action="#" method="post">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="birthdate">Tanggal Lahir:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+       <label for="gender">Jenis Kelamin:</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- Pilih Jenis Kelamin --</option>
+          <option value="pria">Laki-Laki</option>
+          <option value="wanita">Perempuan</option>
+        </select>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="paket">Pilih Paket:</label>
+      <select id="paket" name="paket" required>
+        <option value="">-- Pilih Paket --</option>
+        <option value="harmoni">Paket Harmoni</option>
+        <option value="proaktif">Paket Proaktif</option>
+        <option value="utama">Paket Utama</option>
+      </select>
+
+      <label for="dokter">Pilih Dokter:</label>
+      <select id="dokter" name="dokter">
+        <option value="">-- Pilih Dokter --</option>
+        <option value="febri">Dr. Febri</option>
+        <option value="fadil">Dr. Fadil</option>
+        <option value="ana">Dr. Ana</option>
+        <option value="rian">Dr. Rian</option>
+      </select>
+
+     <button type="button" onclick="showPayment()">Kirim Pendaftaran</button>
+    </form>
+  </div>
+
+<section id="payment-section" style="display: none;" class="payment-card">
+  <h2>Langkah Terakhir: Pembayaran</h2>
+  <p>Silakan pilih metode pembayaran yang kamu inginkan:</p>
+
+  <div class="payment-methods">
+    <!-- <div class="payment-option">
+      <img src="images/qris.png" alt="Bayar dengan QRIS">
+      <p>QRIS (semua e-wallet)</p>
+    </div> -->
+    <div class="payment-option">
+      <img src="images/BCA.png" alt="Transfer ke BCA" class="payment-img">
+      <p>Transfer BCA<br><strong>123-456-7890</strong> a.n. Konselink aselole</p>
+    </div>
+    <div class="payment-option">
+      <img src="images/DANA.png" alt="Bayar dengan DANA" class="dana-img">
+      <p>DANA<br><strong>0812-3456-7890</strong> a.n. Konselink aselole</p>
+    </div>
+  </div>
+
+  <p class="text-center">Setelah transfer, kirim bukti pembayaran ke <strong>admin@konselink.com</strong> atau WhatsApp: <strong>0812-XXXX-XXXX</strong>.</p>
+
+  <div class="text-center mt-2">
+    <button class="btn" onclick="goBackToForm()">Kembali ke Formulir</button>
+  </div>
+</section>
+</section>
+</main>
+
+     <footer id="main-footer" class="bg-dark text-center py-1">
+          <div class="container">
+            Copyright &copy; 2025, Konselink.com
+          </div>
+          <div class="social-links text-center">
+            <p>Ikuti kami di:</p>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-youtube" aria-hidden="true"></i> YouTube
+            </a> |
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook
+            </a> |
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+            </a>
+          </div>
+
+        </footer>
+
+       <script>
+          document.querySelectorAll('a[href^="#form-pendaftaran"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const section = document.querySelector(this.getAttribute('href'));
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+</script>
+
+<script>
+  function showPayment() {
+    const formCard = document.querySelector('.form-card');
+    const paymentSection = document.getElementById('payment-section');
+
+    // Validasi sederhana
+    const nama = document.getElementById('nama').value;
+    const email = document.getElementById('email').value;
+    const paket = document.getElementById('paket').value;
+
+    if (nama && email && paket) {
+      formCard.style.display = 'none';
+      paymentSection.style.display = 'block';
+      paymentSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      alert('Mohon lengkapi semua data wajib terlebih dahulu.');
+    }
+  }
+
+  function goBackToForm() {
+    document.querySelector('.form-card').style.display = 'block';
+    document.getElementById('payment-section').style.display = 'none';
+    document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+</body>
+</html>
